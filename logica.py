@@ -18,6 +18,10 @@ df = pd.read_csv(
     index_col="id_inquilino"
 )
 
+df = df.astype(str)
+df = df.apply(lambda x: x.str.strip())
+df = df.sort_index()
+
 print("CSV CARGADO OK")  # 👈 AQUI
 print(df.head())        # 👈 AQUI (muestra datos)
 
