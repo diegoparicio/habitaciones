@@ -29,7 +29,7 @@ df.columns = [
 
 print("COLUMNAS OK")
 
-print("ANTES ENCODER")
+'''print("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
 # Realizar el one-hot encoding
@@ -67,15 +67,16 @@ print("DESPUES SIMILARIDAD")
 
 
 # 5. BÚSQUEDA DE INQUILINOS COMPATIBLES
-'''
-Input:
-* id_inquilinos: el o los inquilinos actuales DEBE SER UNA LISTA aunque sea solo un dato
-* topn: el número de inquilinos compatibles a buscar
 
-Output:
-Lista con 2 elementos.
-Elemento 0: las características de los inquilinos compatibles
-Elemento 1: el dato de similaridad
+'''
+#Input:
+#* id_inquilinos: el o los inquilinos actuales DEBE SER UNA LISTA aunque sea solo un dato
+#* topn: el número de inquilinos compatibles a buscar
+
+#Output:
+#Lista con 2 elementos.
+#Elemento 0: las características de los inquilinos compatibles
+#Elemento 1: el dato de similaridad
 '''
 
 def inquilinos_compatibles(id_inquilinos, topn):
@@ -112,5 +113,5 @@ def inquilinos_compatibles(id_inquilinos, topn):
     similitud_series = pd.Series(data=topn_inquilinos.values, index=topn_inquilinos.index, name='Similitud')
 
     # Devolver el resultado y el objeto Series
-    return(resultado, similitud_series)
+    return(resultado, similitud_series)'''
 
