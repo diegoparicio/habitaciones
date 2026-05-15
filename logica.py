@@ -20,7 +20,7 @@ df = pd.read_csv(
 
 df = df.astype(str)
 df = df.apply(lambda x: x.str.strip())
-df = df.sort_index()
+# df = df.sort_index()
 
 print("CSV CARGADO OK")  # 👈 AQUI
 print(df.head())        # 👈 AQUI (muestra datos)
