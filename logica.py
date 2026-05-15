@@ -31,9 +31,11 @@ df.columns = [
 
 print("COLUMNAS OK")
 
-
-print(df.dtypes)
-print(df.isnull().sum())
+import streamlit as st
+st.write("DEBUG - DF INFO")
+st.write(df.head())
+st.write(df.dtypes)
+st.write(df.isnull().sum())
 
 '''
 print("ANTES ENCODER")
