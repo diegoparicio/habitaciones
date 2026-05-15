@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from logica_1 import inquilinos_compatibles
+from logica import inquilinos_compatibles
 from ayudantes import generar_grafico_compatibilidad, generar_tabla_compatibilidad, obtener_id_inquilinos
 
 # Configurar la página para utilizar un layout más amplio.
