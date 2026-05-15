@@ -7,6 +7,8 @@ import ayudantes
 
 st.write("ayudantes importado")
 
-from logica import inquilinos_compatibles
+import logica
+
+# from logica import inquilinos_compatibles
 
 st.write("logica importado")
