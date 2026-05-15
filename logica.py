@@ -1,3 +1,4 @@
+import streamlit as st
 # 1. SETUP
 st.write("ANTES DE IMPORTAR")  # 👈 AQUI
 import os
@@ -35,7 +36,6 @@ df.columns = [
 
 st.write("COLUMNAS OK")
 
-import streamlit as st
 st.write("DEBUG - DF INFO")
 st.write(df.head())
 st.write(df.dtypes)
