@@ -41,7 +41,7 @@ st.write(df.head())
 st.write(df.dtypes)
 st.write(df.isnull().sum())
 
-'''
+
 print("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
@@ -127,4 +127,4 @@ def inquilinos_compatibles(id_inquilinos, topn):
 
     # Devolver el resultado y el objeto Series
     return(resultado, similitud_series)
-'''
+
