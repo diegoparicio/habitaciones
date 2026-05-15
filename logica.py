@@ -29,6 +29,7 @@ df.columns = [
 
 print("COLUMNAS OK")
 
+
 '''print("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
