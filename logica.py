@@ -15,7 +15,7 @@ df.columns = [
 
 # 3. ONE HOT ENCODING
 # Realizar el one-hot encoding
-encoder = OneHotEncoder(sparse_output=False)   # cambiado 'sparse' por 'sparse_output'
+encoder = OneHotEncoder(sparse=False)   # cambiado 'sparse' por 'sparse_output'
 df_encoded = encoder.fit_transform(df)
 
 # Obtener los nombres de las variables codificadas después de realizar el one-hot encoding
