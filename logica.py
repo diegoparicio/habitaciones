@@ -30,7 +30,7 @@ df.columns = [
 print("COLUMNAS OK")
 
 
-'''print("ANTES ENCODER")
+print("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
 # Realizar el one-hot encoding
@@ -63,7 +63,7 @@ matriz_s_reescalada = ((matriz_s - min_original) / (max_original - min_original)
 df_similaridad = pd.DataFrame(matriz_s_reescalada,
         index = df.index,
         columns = df.index)
-
+        
 print("DESPUES SIMILARIDAD")
 
 
@@ -114,5 +114,5 @@ def inquilinos_compatibles(id_inquilinos, topn):
     similitud_series = pd.Series(data=topn_inquilinos.values, index=topn_inquilinos.index, name='Similitud')
 
     # Devolver el resultado y el objeto Series
-    return(resultado, similitud_series)'''
+    return(resultado, similitud_series)
 
