@@ -1,11 +1,13 @@
 # 1. SETUP
-
+print("ANTES DE IMPORTAR")  # 👈 AQUI
 import os
+print("OS OK")  # 👈 AQUI
 import numpy as np
+print("NUMPY OK")  # 👈 AQUI
 import pandas as pd
+print("PANDAS OK")  # 👈 AQUI
 from sklearn.preprocessing import OneHotEncoder
-
-print("LOGICA IMPORTADA OK")  # 👈 AQUI
+print("ONE-HOT ENCODER OK")  # 👈 AQUI
 
 # 2. CARGA DE DATOS
 # df = pd.read_csv('dataset_inquilinos.csv', index_col = 'id_inquilino')
