@@ -3,6 +3,10 @@ import pandas as pd
 
 st.title("Test")
 
+import ayudantes
+
+st.write("ayudantes importado")
+
 from logica import inquilinos_compatibles
 
 st.write("logica importado")
