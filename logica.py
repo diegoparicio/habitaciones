@@ -5,6 +5,8 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+print("LOGICA IMPORTADA OK")  # 👈 AQUI
+
 # 2. CARGA DE DATOS
 # df = pd.read_csv('dataset_inquilinos.csv', index_col = 'id_inquilino')
 
@@ -14,11 +16,20 @@ df = pd.read_csv(
     index_col="id_inquilino"
 )
 
+print("CSV CARGADO OK")  # 👈 AQUI
+print(df.head())        # 👈 AQUI (muestra datos)
+
+print("ANTES COLUMNAS")
+
 df.columns = [
 'horario', 'bioritmo', 'nivel_educativo', 'leer', 'animacion', 
 'cine', 'mascotas', 'cocinar', 'deporte', 'dieta', 'fumador',
 'visitas', 'orden', 'musica_tipo', 'musica_alta', 'plan_perfecto', 'instrumento'
 ]
+
+print("COLUMNAS OK")
+
+print("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
 # Realizar el one-hot encoding
@@ -27,6 +38,10 @@ df_encoded = encoder.fit_transform(df)
 
 # Obtener los nombres de las variables codificadas después de realizar el one-hot encoding
 encoded_feature_names = encoder.get_feature_names_out()
+
+print("DESPUES ENCODER")
+
+print("ANTES SIMILARIDAD")
 
 # 4. MATRIZ DE SIMILIARIDAD
 # Calcular la matriz de similaridad utilizando el punto producto
@@ -47,6 +62,8 @@ matriz_s_reescalada = ((matriz_s - min_original) / (max_original - min_original)
 df_similaridad = pd.DataFrame(matriz_s_reescalada,
         index = df.index,
         columns = df.index)
+
+print("DESPUES SIMILARIDAD")
 
 
 # 5. BÚSQUEDA DE INQUILINOS COMPATIBLES
