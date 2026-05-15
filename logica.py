@@ -1,13 +1,13 @@
 # 1. SETUP
-print("ANTES DE IMPORTAR")  # 👈 AQUI
+st.write("ANTES DE IMPORTAR")  # 👈 AQUI
 import os
-print("OS OK")  # 👈 AQUI
+st.write("OS OK")  # 👈 AQUI
 import numpy as np
-print("NUMPY OK")  # 👈 AQUI
+st.write("NUMPY OK")  # 👈 AQUI
 import pandas as pd
-print("PANDAS OK")  # 👈 AQUI
+st.write("PANDAS OK")  # 👈 AQUI
 from sklearn.preprocessing import OneHotEncoder
-print("ONE-HOT ENCODER OK")  # 👈 AQUI
+st.write("ONE-HOT ENCODER OK")  # 👈 AQUI
 
 # 2. CARGA DE DATOS
 # df = pd.read_csv('dataset_inquilinos.csv', index_col = 'id_inquilino')
@@ -22,10 +22,10 @@ df = df.astype(str)
 df = df.apply(lambda x: x.str.strip())
 # df = df.sort_index()
 
-print("CSV CARGADO OK")  # 👈 AQUI
-print(df.head())        # 👈 AQUI (muestra datos)
+st.write("CSV CARGADO OK")  # 👈 AQUI
+st.write(df.head())        # 👈 AQUI (muestra datos)
 
-print("ANTES COLUMNAS")
+st.write("ANTES COLUMNAS")
 
 df.columns = [
 'horario', 'bioritmo', 'nivel_educativo', 'leer', 'animacion', 
@@ -33,7 +33,7 @@ df.columns = [
 'visitas', 'orden', 'musica_tipo', 'musica_alta', 'plan_perfecto', 'instrumento'
 ]
 
-print("COLUMNAS OK")
+st.write("COLUMNAS OK")
 
 import streamlit as st
 st.write("DEBUG - DF INFO")
@@ -42,7 +42,7 @@ st.write(df.dtypes)
 st.write(df.isnull().sum())
 
 
-print("ANTES ENCODER")
+st.write("ANTES ENCODER")
 
 # 3. ONE HOT ENCODING
 # Realizar el one-hot encoding
@@ -52,9 +52,9 @@ df_encoded = encoder.fit_transform(df)
 # Obtener los nombres de las variables codificadas después de realizar el one-hot encoding
 encoded_feature_names = encoder.get_feature_names_out()
 
-print("DESPUES ENCODER")
+st.write("DESPUES ENCODER")
 
-print("ANTES SIMILARIDAD")
+st.write("ANTES SIMILARIDAD")
 
 # 4. MATRIZ DE SIMILIARIDAD
 # Calcular la matriz de similaridad utilizando el punto producto
@@ -76,7 +76,7 @@ df_similaridad = pd.DataFrame(matriz_s_reescalada,
         index = df.index,
         columns = df.index)
         
-print("DESPUES SIMILARIDAD")
+st.write("DESPUES SIMILARIDAD")
 
 
 # 5. BÚSQUEDA DE INQUILINOS COMPATIBLES
