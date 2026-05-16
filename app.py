@@ -55,6 +55,6 @@ elif resultado is not None:
     with cols[1]:  # Esto hace que la tabla y su título aparezcan en la segunda columna
         st.write("Comparativa entre compañeros:")
         fig_tabla = generar_tabla_compatibilidad(resultado)
-        st.plotly_chart(fig_tabla, use_container_width=True)
+        st.plotly_chart(fig_tabla, width='stretch')  # st.plotly_chart(fig_tabla, use_container_width=True)
 
 
