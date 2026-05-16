@@ -13,6 +13,13 @@ df = pd.read_csv(
     index_col="id_inquilino"
 )
 
+df.columns = [
+'horario', 'bioritmo', 'nivel_educativo', 'leer', 'animacion', 
+'cine', 'mascotas', 'cocinar', 'deporte', 'dieta', 'fumador',
+'visitas', 'orden', 'musica_tipo', 'musica_alta', 'plan_perfecto', 'instrumento'
+]
+
+# Limpieza de datos: convertir a string y eliminar espacios en blanco
 df = df.astype(str).apply(lambda x: x.str.strip())
 
 # -----------------------------
